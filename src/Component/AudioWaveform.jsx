@@ -6,15 +6,15 @@ import WaveSurfer from 'wavesurfer.js';
 function AudioWaveform({ audioUrl, videoPlayerRef }) {
   const waveformRef = useRef(null);
   let wavesurfer = null;
-  
-  if(videoPlayerRef === null){
-      return (
-          <h1>Loading...</h1>
-      )
-  }
+
   console.log("audioUrl ", audioUrl)
   console.log("videoPlayerRef ", videoPlayerRef)
 
+    if(videoPlayerRef === null){ 
+        return (
+            <h1>Loading...</h1>
+        )
+    }
 
 
   useEffect(() => {
